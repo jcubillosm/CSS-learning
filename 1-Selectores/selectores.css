@@ -1,0 +1,148 @@
+/* ##### 1-SELECTORES ##### */
+
+/* ### Notas:
+  * Las hojas CSS se leen de arriba a abajo por lo que el último estilo prevalece sobre el anterior (Prioridad).
+  * Se pueden compartir estilos entre distintos elementos, solo es necesario añadirlos separados por una coma, ejemplo:
+    #title,
+    #description{
+      background: gray;
+    }
+
+  * Se pueden utilizar las clases para seleccionar grupos de elementos, pues una misma clase puede ser aplicada a varios elementos. De igual manera, un elemento puede tener varias clases.
+  También se pueden compartir estilos, para ello solo es necesario poner las clases separadas por una coma:
+    .title,
+    .description{
+      background: gray;
+    }
+  * Se pueden seleccionar todos los elementos dentro de un elemento utilizando el selector univeral (1.1 Selector universal y 1.5 Selector de atributo)
+  */
+
+
+/* ### 1.1 Selector universal 
+
+Este selector es para aplicar estilos en general a todas las etiquetas y elementos del HTML. Es muy utilizado para asignar la fuente a toda la página, para asignar paddings y margenes. 
+
+  ¡¡ En este caso, cada uno de los elementos lleva un margen de 10px que podría dar problemas, lo mejor sería aplicar los margenes individualmente y dar un margen general solo al body (comento margen para evitar líos).!!
+  
+  Este selector puede ser utilizado dentro de otros elementos, es decir, puedo querer aplicarlos a todos los elementos de un formulario (véase "1.5 selectores de atributo").
+  */
+
+*{
+  font-family: Arial, Helvetica, sans-serif;
+  /*margin: 10px;*/
+}
+
+
+/* ### 1.2 Selector de etiqueta
+Permite aplicar estilos a los elementos del HTML que tienen una etiqueta concreta. Por ejemplo, si elijo la etiqueta "h1", el estilo se aplicará a todos los elementos que tienen esa etiqueta.
+*/
+h1 {
+  background: grey;
+  color: white;
+  padding: 20px;
+}
+
+a{
+  font-size: 16px;
+  color: blueviolet;
+  text-decoration: none;
+}
+
+/* También es posible aplicar el estilo de una manera más concreta, especificando elementos/etiquetas dentro de otros elementos/etiquetas, por ejemplo, el caso del "footer" que contiene una etiqueta "a", podemos aplicarle un color diferente a esa etiqueta haciendo lo siguiente:*/
+
+footer a {
+  color: green;
+}
+
+
+/* # 1.3 Selector de id
+Con el identificador puedo seleccionar los elementos por ese id. Dentro de los elementos del HTML, los id son únicos para cada elemento por lo que aplicando estilos a un id significa aplicar estilos a un elemento específico y NO a un grupo de elementos.
+*/
+#first{
+  border: 3px solid gray;
+  padding: 10px;
+}
+/* Sobreescribiendo estilos en el "h1". Es importante recordar que el último estilo prevalece sobre los anteriores. En este caso, la etiqueta "h1" ya tiene unos estilos aplicados pero van a ser sobreescritos:*/
+#title {
+  background: blue;
+  border: 4px dashed white;
+}
+
+/*Se pueden compartir estilos separando los elementos con una coma, por ejemplo:*/
+#title, 
+#description {
+  padding: 15px;
+  color: red;
+}
+
+/* # 1.4 Selector de clase
+Son similares a los selectores de id pero en este caso es para aplicar estilos a múltiples elementos pues varios elementos de distinto tipo pueden tener la misma clase.
+
+Los elementos pueden tener más de una clase y se les pueden aplicar estilos a cualquiera de esas clases dependiendo de lo que se quiera hacer.*/
+.paraph {
+  font-style: italic;
+  text-decoration: underline;
+  font-weight: bold;
+}
+/* Se pueden compartir estilos entre clases*/
+.paraph1, .paraph3{
+  background-color: green;
+  color: azure;
+}
+
+/* # 1.5 Selector de atributo
+Permite seleccionar elementos del HTML en base a un atributo del elemento. Se aplica mucho en los formularios
+*/
+
+#user form {
+  border: 5px solid blue;
+  margin: 10px 0 10px 0;
+}
+/* La regla display permite hacer que el elemento se comporte como un bloque o en línea.
+Un estilo se puede aplicar a todos los elementos dentro de un elemento aplicando el selector universal dentro de ese elemento, es decir:
+#user form *{
+  display: block;
+}
+En este caso se está diciendo que todos los elementos dentro del elemento con etiqueta "user" y dentro del formulario serán mostrado con la característica "block", uno debajo de otro. 
+*/
+#user form *{
+  display: block;
+  margin: 3px;
+}
+/*Aplicando estilos a elementos con un determinado atributo*/
+input[type="text"] {
+  margin-bottom: 15px;
+  padding: 10px;
+  width: 300px;
+}
+input[type="submit"] {
+  background: green;
+  color: white;
+  padding: 15px;
+  font-size: 15px;
+  text-transform: uppercase;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+/* # 1.6 Selector de hijo
+Aplica estilos a los elementos que están inmediatamente después del signo >, no a todos ni a los que están en niveles inferiores a esos. Por ejemplo, si se quiere aplicar el estilo a los elementos "a" dentro de los "ul" no valdría poner #menu > a porque antes de los elementos "a" existen los elementos "li" por lo tanto, la manera correcta para aplicar esos estilos es la siguiente:*/
+#menu > li > a {
+  color: red;
+}
+
+/* # 1.7 Prioridad
+En CCS se da más prioridad a la última regla/estilo aplicado, recorriendo la hoja de arriba a abajo.
+Pero esto cambia dependiendo de la especificidad de la regla; es decir, cuanto más especifica es una regla más prioridad, se puede observar en el siguiente caso, aunque el color del background "yellow" es el último, se aplica el color "brown" porque la regla es más específica a la hora de indicar a qué elemento está afectando.
+
+Existe una manera de dar prioridad a una regla sobre las demás sin importar la posición o especificidad de las otras reglas, para ello solo es necesario añadir "!important". Aplicando ésto hace que "purple" sea el color aplicado.
+*/
+h1 {
+  background: purple !important ;
+}
+#priority h1{
+  background: brown;
+}
+h1 {
+  background: yellow ;
+}
