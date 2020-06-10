@@ -1,0 +1,29 @@
+/* ##### 4-FONDOS ##### */
+
+/* ### Notas:*/
+
+/* ### Fondos en el body (Scroll):
+* Background-attachment: Fija el fondo
+* Background-position: Se le puede indicar por ejemplo poner la imagen abajo a la derecha, etc...
+*/
+body{
+  background-image: url("images/fondo-1.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+  color: white;
+
+}
+p{
+  padding: 10px;
+  font-size: 20px;
+}
+#subContainer {
+  background-image: url("images/image-5.jpg");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+#paraph{
+  padding: 20px;
+  font-size: 30px;
+}

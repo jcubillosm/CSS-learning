@@ -1,0 +1,16 @@
+/* ##### 4-FONDOS ##### */
+
+/* ### Notas:*/
+
+/* ### Fondos en el body (Color):
+*background: a la propiedad background se le puede poner color, imagen y otras características, todo en la misma línea pero queda poco claro en el momento de leer el código. Lo mismo se puede hacer por separado
+*/
+body{
+  background-color: #cccccc;
+}
+#container{
+  border: 5px dotted black ;
+  padding: 10px;
+  background-color: cornflowerblue;
+  color: white;
+}

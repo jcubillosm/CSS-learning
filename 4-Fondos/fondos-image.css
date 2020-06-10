@@ -1,0 +1,36 @@
+/* ##### 4-FONDOS ##### */
+
+/* ### Notas:*/
+
+/* ### Fondos en el body (Imagen):
+*background-image: se puede poner una imagen en lugar de un color de fondo.
+*background-repeat: Repite la imagen dependiendo del eje que seleccione o no repetir
+*background-size: se puede decir que la imagen ocupe 100% o solo un 20%. Cuidado con el tamaño de la imagen
+*/
+body{
+  background-image: url("images/image-5.jpg");
+  background-repeat: repeat-y;
+
+}
+#container{
+  border: 5px dotted black ;
+  padding: 10px;
+  color: white;
+  background-color: cornflowerblue;  
+}
+#container #paraph1{
+  border: 5px solid black ;
+  padding: 10px;
+  color: white;  
+  background-image: url("images/image-4.jpg");
+  background-repeat: no-repeat;
+}
+h2{
+  color: white;
+  border: 5px dotted black ;
+  padding: 10px;
+  background: black;
+  background-image: url("images/image-3.png");
+  background-repeat: no-repeat;
+  background-size: 20%;
+}
