@@ -1,0 +1,28 @@
+/* ##### 3-COLORES ##### */
+
+/* ### Notas:
+Color picker
+*/ 
+
+/* ### Colores del sistema*/
+h1{
+  color: mediumpurple;
+}
+h3{
+  color: olive;
+}
+
+/* ### Colores hexadecimales*/
+#paraph1{
+  color: #a3660b;
+  font-size: 20px;
+}
+/* ### Colores RGB*/
+#paraph2{
+  color: rgb(49, 2, 59);
+}
+/* ### Colores RGBA
+Permite añadir una transparencia al color RGB elegido*/
+#paraph3{
+  color: rgb(49, 2, 59, 0.5);
+}
