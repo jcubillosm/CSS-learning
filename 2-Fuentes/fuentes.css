@@ -1,0 +1,52 @@
+/* ##### 2-FUENTES ##### */
+
+/* ### Notas:*/ 
+
+
+/* ### Fuentes
+*font-family: Permite aplicar una fuente por defecto. Si esa fuente no está disponible entonces aplica la siguiente fuente de la lista.
+* font-size: Cambia el tamaño de la fuente.
+* font-weight: Cambia el grosor de la fuente.
+* font-style: Cambia el estilo de la fuente. Lo más usado es normal o italic.
+* text-transform: Permite cambiar el texto a mayúsculas o minúsculas.
+* @font-face: para crear una nueva familia de fuentes con una fuente externa descargada.
+*/
+@font-face{
+  font-family: SacramentoCustom; /*Nombre personalizado para la nueva fuente*/
+  src: url(fonts/Sacramento/Sacramento-Regular.ttf);/*Se añaden las fuentes que se quieren usar de las que se han descargado. En este caso la fuente solo tenía un tipo Regular */
+  
+}
+h1{
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: oblique;
+}
+h3{
+  font-family: Georgia;
+  font-size: 25px;
+  font-weight: bold;
+}
+p{
+  font-family: "Comic Sans MS" ;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+/* ### Fuentes externas (link)
+Se pueden utilizar fuentes descargadas de internet. 
+  - Una de las opciones es añadir el link a la fuente en el index.html y usarla en el .css
+      <link href="https://fonts.googleapis.com/css2?family=Piedra&display=swap" rel="stylesheet">
+*/
+#paraph2 {
+  font-family: 'Piedra', cursive;
+  text-transform: uppercase;
+}
+
+/* ### Fuentes externas (Download)
+Descargar la fuente, ponerla en una carpeta para fuentes e importarla en el proyecto.
+
+Se crea una fuente con @font-face (ir al principio de la página)
+*/
+#paraph3 {
+  font-family: SacramentoCustom, Arial, Helvetica, sans-serif;
+  font-size: 30px;
+}
