@@ -1,0 +1,50 @@
+/* ##### 5-TEXTOS ##### */
+
+/* ### Notas:*/ 
+
+
+/* ### Textos
+* color: Cambia el color del texto
+* font-family: Cambia la fuente del texto
+* text-align: Permite cambiar la posición del texto [justify, center, right, left]
+* line-height: Separación entre líneas
+* text-transform: Cambia mayúsculas o minúsculas
+* text-decoration: parmite añadir una líea al texto en diferentes posiciones
+* vertical-align: permite alinear una imagen en un texto
+* text-indent: Identación de los textos (identa la primera línea de un párrafo)
+* word-spacing: Aplica espacio entre palabras
+* letter-spacing: Aplica espacio entre cada letra
+*/
+h1{
+  background-color: black;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  line-height: 50px;
+  text-transform: uppercase;
+  
+}
+h2{
+  text-align: right;
+  text-decoration: overline;
+
+}
+h3 {
+  border: 10px solid black;
+  background-color: blueviolet;
+  color: white;
+  padding: 30px;
+}
+h3 img{
+  vertical-align: top;
+}
+#paraph1{
+  background-color: rgb(9, 3, 102);
+  color: white;
+  text-align: justify;
+  text-indent: 300px;
+  word-spacing: 20px;
+}
+#paraph2{
+  letter-spacing: 15px;
+}
