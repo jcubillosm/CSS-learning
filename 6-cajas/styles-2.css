@@ -1,0 +1,47 @@
+/* ###### 6- CAJAS*/
+
+/*### Cajas
+* Posicionamiento de cajas, se realiza con la propiedad float [left, right, none].
+   - Se puede aplicar "float" a los elementos cuyo "display = block".
+      - Se aplica el estilo display: block y posteriormente se elige flotar ese elemento a la derecha, izquierda o no moverlo.
+
+*!!!clearfix!!!! truco de maestrillo, si se crea un div con la clase class="clearfix" y a esa clase se le asignan los estilos 
+      .clearfix{
+        float: none;
+        clear:both; /left para limpiar los flotados a la izq, right para los flotados a la derecha/
+      }
+      Esto hace que el contenido a continuación no sea flotado 
+*/
+*{
+  margin: 0px;
+  padding: 0px;
+}
+.box{
+  width: 250px;
+  height: 250px;
+  background-color: chocolate;
+  border: 10px solid green;
+  margin: 15px;
+  padding: 20px;
+}
+.boxesFloatRight .boxRight{
+  display: block;
+  float: right; 
+}
+.boxesFloatLeft .boxLeft,
+.boxesFloat{
+  display: block;
+  float: left; 
+}
+.box p{
+  font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  line-height: 230px;
+}
+
+.clearfix{
+  float: none;
+  clear:both;
+}

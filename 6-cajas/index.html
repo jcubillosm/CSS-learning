@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class="no-js"> 
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles-1.css">
+    <link rel="stylesheet" href="styles-2.css">
+  </head>
+  <body>
+    <h1>CSS: Modificando el comportamiento de mis cajas</h1>
+    <section class="boxesInitial">
+      <div id="box1">
+        <p>Contenido de la caja 1</p>
+      </div>
+      <div id="box2">
+        <p>Contenido de la caja 2</p>
+      </div>
+    </section>
+    <section class="boxesFloatRight">
+      <h1 class="boxRight">CSS: Float a la derecha</h1>
+      <div class="box boxRight">
+        <p>Contenido de la caja 3</p>
+      </div>
+      <div  class="box boxRight">
+        <p>Contenido de la caja 4</p>
+      </div>
+    </section>
+    <section class="boxesFloatLeft">
+      <h1 class="boxLeft">CSS: Float a la izquierda</h1>
+      <div class="box boxLeft">
+        <p>Contenido de la caja 5</p>
+      </div>
+      <div  class="box boxLeft">
+        <p>Contenido de la caja 6</p>
+      </div>
+    </section>
+    <section class="boxesFloat boxesFloatLeft">
+      <h1 class="boxLeft">CSS: Float a la izquierda, contenedor y contenido</h1>
+      <p>Al hacer flotar el contenedor también afecta el flotado a los elementos a continuación</p>
+      <div class="box boxLeft">
+        <p>Contenido de la caja 7</p>
+      </div>
+      <div class="box boxLeft">
+        <p>Contenido de la caja 8</p>
+      </div>
+    </section>
+    <div class="clearfix"></div>
+    <h2> Contenido después de las cajas posicionadas</h2>
+    <p> Texto de pruebas</p>
+    <script src="" async defer></script>
+  </body>
+</html>
