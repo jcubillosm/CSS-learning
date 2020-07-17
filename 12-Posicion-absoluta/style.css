@@ -1,0 +1,126 @@
+/* ### POSICIÓN ABSOLUTA*/
+
+/* Posición absoluta:
+    * Position:absolute. La página actual tiene por defecto todos sus elementos en posición relativa por lo que una nueva caja se añadirá a continuación de lo que ya existe. Si se usa una posición absoluta y se indica la posición(top, bottom, left, right) puedo colocar las cajas libremente a través de toda la página.
+
+    *z-index: permite indicar qué elemento está situado sobre otro.  
+*/
+*{
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.aloneBox{
+  border: 1px solid black;
+  color: white;
+  width: 50px;
+  height: 100px;
+  font-size: 13px;
+}
+.blueAloneBox{
+    /* Para mover la caja libremente necesitamos utilizar position: absolute*/
+    position: absolute;
+    top: 0%;
+    left:55%;
+    z-index: 1;
+    background-color: blue;
+}
+.redAloneBox{
+  /* Para mover la caja libremente necesitamos utilizar position: absolute*/
+  position: absolute;
+  top: 0%;
+  left:50%;
+  background-color: red;
+}
+#container{
+  width: 1200px;
+  max-width: 1200px;
+  border: 1px solid black;
+  margin: 0px auto;
+}
+header{
+  width: 100%;
+  height: 100%;
+  background: rgb(15, 118, 236);
+  color: white;
+  text-align: center;
+  line-height: 90px;
+}
+#menu{
+  background: #eee;
+}
+#menu ul li{
+  display: inline-block;
+  border-right: 1px solid #ccc;
+}
+#menu ul li:hover{
+  background:  rgb(6, 57, 114);
+  cursor: pointer;
+}
+#menu ul li a{
+  display: block;
+  padding: 15px;
+  color: #444;
+}
+#menu ul li:hover a{ 
+  color: white;
+}
+#contain{
+  width: 60%;
+  max-width: 70%;
+  margin: auto;
+  float:left;
+}
+#contain > h1{
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  padding: 15px;
+  color: #444;
+  text-shadow: 0px 0px 2px gray;
+}
+
+#contain .box{
+  width: 40%;
+  height: 200px;
+  background-color: #ccc;
+  border: 1px solid gray;
+  margin: 15px;
+  padding: 20px;
+  display: block;
+  float: left;
+  box-shadow: 0px 0px 2px gray;
+  border-radius: 20px 10px 50px 5px;
+}
+.box p{
+  font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  color: #444;
+  text-align: center;
+  line-height: 200px;
+  text-transform: uppercase;
+
+}
+.clearfix{
+  float: none;
+  clear: both;
+}
+#lateral{
+  float: left;
+  width: 30%;
+  min-height: 500px;
+  text-align: center;
+  border: 10px solid green;
+  overflow: auto; 
+}
+footer{
+  width: 100%;
+  height: 55px;
+  background: #eee;
+  text-align: center;
+  color: #444;
+  line-height: 55px;
+  border-top: 1px solid #ccc;
+}
