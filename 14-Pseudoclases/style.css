@@ -1,0 +1,86 @@
+/*### PSEUDOCLASES*/
+
+/* Pseudoclases:
+  * una pseudoclase es lo que se pone a los selectores después de poner dos puntos. Por ejemplo :hover, :first-child
+
+    Es una palabra clave que se añade a los selectores y que especifica un estado especial del elemento seleccionado. Por ejemplo,  :hover aplicará un estilo cuando el usuario haga hover sobre el elemento especificado por el selector.
+
+       selector:pseudoclase { propiedad: valor; } 
+
+    Indice de las pseudo-clases estándar
+    :active
+    :checked
+    :default
+    :dir()
+    :disabled
+    :empty
+    :enabled
+    :first
+    :first-child
+    :first-of-type
+    :fullscreen
+    :focus
+    :hover
+    :indeterminate
+    :in-range
+    :invalid
+    :lang()
+    :last-child
+    :last-of-type
+    :left
+    :link
+    :not()
+    :nth-child()
+    :nth-last-child()
+    :nth-last-of-type()
+    :nth-of-type()
+    :only-child
+    :only-of-type
+    :optional
+    :out-of-range
+    :read-only
+    :read-write
+    :required
+    :right
+    :root
+    :scope
+    :target
+    :valid
+    :visited
+*/
+
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
+ul li{
+  font-size: 20px;
+}
+ul li:first-child{
+  color:purple;
+}
+ul li:nth-child(2){
+  color: blue;
+}
+ul li:last-child{
+  color:greenyellow;
+}
+a{
+  font-size: 30px;
+  color: salmon;
+}
+a:link{
+  color: rgb(255, 72, 0);
+}
+a:visited{
+  color: purple;
+}
+a:hover{
+  color: gray;
+}
+input[type="text"]{
+  margin-top: 10px;
+  padding: 10px;
+}
+input[type="text"]:focus{
+  border: 4px dashed blue;
+}
