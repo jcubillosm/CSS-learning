@@ -1,0 +1,76 @@
+/*#### TRANSICIONES Y ANIMACIONES ####*/
+
+/*Transiciones y animaciones*/
+/*
+**Transiciones
+transition: [A qué, cuánto tiempo]
+Ejemplo: transition: all 3s;
+  Aplicará la transición a todo el CSS y será de 3 segundos de duración
+
+Se puede aplicar la transición a varios elementos y no a todo el CSS
+Ejemplo:  transition: border 500ms, background 3s, border-radius 1s;
+
+**Animación
+Es necesario definir los @keyframes[nombre] y se puede utilizar "from" "to" o un valor en porcentajes
+para aplicarle la animación a un selector en concreto uso:
+  animation-name: [nombre del Keyframe]
+  animation-duration: [tiempo en segundos]
+  animation-iteration-count: [Intervalo de duración]
+
+*/
+
+#boton{
+  display: block;
+  padding: 20px;
+  background-color: green;
+  color: white;
+  width: 200px;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  border: 5px green solid;
+  /*transition: all 3s; *//*Transición de todas las propiedades CSS y que tarde 3 seg*/
+  transition: border 500ms, background 3s, border-radius 1s;
+
+}
+#boton:hover{
+  border-radius: 15px;
+  background: orangered;
+  border-radius: 5px solid red;
+}
+#caja{
+  width: 250px;
+  height: 250px;
+  background: lightcoral;
+  color: crimson;
+  border: 5px solid black;
+  font-size: 20px;
+  text-align: center;
+  line-height: 250px;
+  /*Animación*/
+  animation-name: desplazamiento;
+  animation-duration:10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes desplazamiento{
+  /*from{ 
+    margin-left: 0px;
+  }
+  to{
+    margin-left:1200px;
+  }*/
+  0%{ 
+    margin-left: 0px;
+    transform: rotate(0deg);
+  }
+  50%{
+    margin-left:1200px;
+    transform: rotate(360deg);
+  }
+  100%{ 
+    margin-left: 0px;
+    transform: rotate(0deg);
+  }
+}
